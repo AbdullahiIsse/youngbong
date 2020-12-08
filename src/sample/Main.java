@@ -10,8 +10,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
-    private double xOffset = 1;
-    private double yOffset = 1;
+    private double xOffset = 0;
+    private double yOffset = 0;
 
 
     @Override
