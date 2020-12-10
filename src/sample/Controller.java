@@ -9,8 +9,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import sample.controller.DataObject;
 
 import javax.print.DocFlavor;
 import java.io.IOException;
@@ -52,9 +54,9 @@ public class Controller {
     }
 
     public void intialize (URL url , ResourceBundle resourceBundle){
-        TableColumn<DataObject, String> attribute1Column = new TableColumn<>("Attribute1");
-        TableColumn<DataObject, Integer> attribute2Column = new TableColumn<>("Attribute2");
-        TableColumn<DataObject, Boolean> attribute3Column = new TableColumn<>("Attribute3");
+        TreeTableColumn <DataObject, String> attribute1Column = new TableColumn<>("Attribute1");
+        TreeTableColumn <DataObject, Integer> attribute2Column = new TableColumn<>("Attribute2");
+        TreeTableColumn <DataObject, String> attribute3Column = new TableColumn<>("Attribute3");
 
         attribute1Column.setCellValueFactory(new PropertyValueFactory<>("attribute1"));
         attribute2Column.setCellValueFactory(new PropertyValueFactory<>("attribute2"));
