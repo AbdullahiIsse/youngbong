@@ -52,6 +52,13 @@ public class Controller {
     }
 
     public void intialize (URL url , ResourceBundle resourceBundle){
+        TableColumn<DataObject, String> attribute1Column = new TableColumn<>("Attribute1");
+        TableColumn<DataObject, Integer> attribute2Column = new TableColumn<>("Attribute2");
+        TableColumn<DataObject, Boolean> attribute3Column = new TableColumn<>("Attribute3");
+
+        attribute1Column.setCellValueFactory(new PropertyValueFactory<>("attribute1"));
+        attribute2Column.setCellValueFactory(new PropertyValueFactory<>("attribute2"));
+        attribute3Column.setCellValueFactory(new PropertyValueFactory<>("attribute3"));
         TreeTableColumn navn = new TreeTableColumn("Navn");
         TreeTableColumn telefon = new TreeTableColumn("telefon");
         TreeTableColumn rolle = new TreeTableColumn("rolle");
