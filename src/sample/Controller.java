@@ -54,18 +54,15 @@ public class Controller {
     }
 
     public void intialize (URL url , ResourceBundle resourceBundle){
-        TreeTableColumn <DataObject, String> attribute1Column = new TableColumn<>("Attribute1");
-        TreeTableColumn <DataObject, Integer> attribute2Column = new TableColumn<>("Attribute2");
-        TreeTableColumn <DataObject, String> attribute3Column = new TableColumn<>("Attribute3");
+        TreeTableColumn <DataObject, String> attribute1Column = new TreeTableColumn<DataObject, String>("Attribute1");
+        TreeTableColumn <DataObject, Integer> attribute2Column = new TreeTableColumn<DataObject, Integer>("Attribute2");
+        TreeTableColumn <DataObject, String> attribute3Column = new TreeTableColumn<DataObject, String>("Attribute3");
 
-        attribute1Column.setCellValueFactory(new PropertyValueFactory<>("attribute1"));
-        attribute2Column.setCellValueFactory(new PropertyValueFactory<>("attribute2"));
-        attribute3Column.setCellValueFactory(new PropertyValueFactory<>("attribute3"));
-        TreeTableColumn navn = new TreeTableColumn("Navn");
-        TreeTableColumn telefon = new TreeTableColumn("telefon");
-        TreeTableColumn rolle = new TreeTableColumn("rolle");
+        attribute1Column.setCellValueFactory(new PropertyValueFactory("attribute1"));
+        attribute2Column.setCellValueFactory(new PropertyValueFactory("attribute2"));
+        attribute3Column.setCellValueFactory(new PropertyValueFactory("attribute3"));
 
-        thetable.getColumns().addAll(navn,telefon,rolle);
+
 
 
     }
