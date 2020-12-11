@@ -15,7 +15,7 @@ public class Model
     members.add(new Member("Line", "29454999"));
   }
 
-  public ArrayList<Member> getMembers()
+  public static ArrayList<Member> getMembers()
   {
     return members;
   }
