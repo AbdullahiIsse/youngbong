@@ -61,11 +61,12 @@ public class Controller {
         attribute1Column.setCellValueFactory(new PropertyValueFactory<>("attribute1"));
         attribute2Column.setCellValueFactory(new PropertyValueFactory<>("attribute2"));
         attribute3Column.setCellValueFactory(new PropertyValueFactory<>("attribute3"));
-        dataObjectTableView.getColumns().add(attribute1Column);
-        dataObjectTableView.getColumns().add(attribute2Column);
-        dataObjectTableView.getColumns().add(attribute3Column);
 
-        dataObjectTableView.getItems().addAll(model.getAllDataObjects());
+        thetable.getColumns().add( attribute1Column);
+        thetable.getColumns().add( attribute2Column);
+        thetable.getColumns().add( attribute3Column);
+
+
 
     }
 
