@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class Controller {
     @FXML private AnchorPane rootpane;
-    @FXML private TreeTableView thetable;
+    @FXML private TableView thetable;
 
 
     public void load1(javafx.event.ActionEvent actionEvent) throws IOException {
