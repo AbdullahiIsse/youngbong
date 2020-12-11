@@ -22,6 +22,7 @@ public class Main extends Application {
         primaryStage.setTitle("Colour IT");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
+
         primaryStage.initStyle(StageStyle.UNDECORATED);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
 
