@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sample.controller.Model;
 
 public class Main extends Application {
     private double xOffset = 0;
@@ -17,7 +16,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Model model = new Model();
         Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
         primaryStage.setTitle("Colour IT");
         primaryStage.setScene(new Scene(root, 600, 400));
