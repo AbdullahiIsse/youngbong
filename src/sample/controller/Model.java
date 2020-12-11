@@ -2,36 +2,45 @@ package sample.controller;
 
 import java.util.ArrayList;
 
-public class Model implements ModelInterface
+public class Model
 {
-  private ListOfDataObject listOfDataObject;
+  //  private static ListOfDataObject listOfDataObject;
+  private static ArrayList<Member> members;
 
   public Model()
   {
-    listOfDataObject = new ListOfDataObject();
-    listOfDataObject
-        .addDataObject(new DataObject("Mark", 51408516, "Scrummaster"));
-    listOfDataObject.addDataObject(new DataObject("Amer", 12345678, "Kunde"));
+    members = new ArrayList<>();
+    members.add(new Member("Mark", "51408516"));
+    members.add(new Member("Andreas", "29276508"));
+    members.add(new Member("Line", "29454999"));
   }
 
-  @Override public ArrayList<DataObject> getAllDataObjects()
+  public ArrayList<Member> getMembers()
   {
-    return listOfDataObject.getAllDataobjects();
+    return members;
   }
 
-  @Override public DataObject getDataObjectByName(String attribute1)
+  public Member getMemberByName(String name)
   {
-    return listOfDataObject.getDataObjecktByName(attribute1);
+    for (Member member : members)
+    {
+      if (member.getName().equalsIgnoreCase(name))
+        return member;
+    }
+    return null;
   }
 
-  @Override public void addDataObject(DataObject dataObject)
+  public void addMember(Member member)
   {
-    listOfDataObject.addDataObject(dataObject);
+    members.add(member);
   }
 
-  @Override public void save()
+  public void removeMember(String name)
   {
-
+    for (Member member : members)
+    {
+      if (member.getName().equalsIgnoreCase(name))
+        members.remove(member);
+    }
   }
 }
-
