@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import sample.controller.DataObject;
+import sample.controller.Member;
+import sample.controller.Model;
 
 import javax.print.DocFlavor;
 import java.io.IOException;
@@ -54,17 +56,15 @@ public class Controller {
     }
 
     public void intialize (URL url , ResourceBundle resourceBundle){
-        TreeTableColumn <DataObject, String> attribute1Column = new TreeTableColumn<DataObject, String>("Attribute1");
-        TreeTableColumn <DataObject, Integer> attribute2Column = new TreeTableColumn<DataObject, Integer>("Attribute2");
-        TreeTableColumn <DataObject, String> attribute3Column = new TreeTableColumn<DataObject, String>("Attribute3");
+        TableColumn <DataObject, String> attribute1Column = new TableColumn<DataObject, String>("Attribute1");
+        TableColumn <DataObject, Integer> attribute2Column = new TableColumn<DataObject, Integer>("Attribute2");
+        TableColumn <DataObject, String> attribute3Column = new TableColumn<DataObject, String>("Attribute3");
 
         attribute1Column.setCellValueFactory(new PropertyValueFactory("attribute1"));
         attribute2Column.setCellValueFactory(new PropertyValueFactory("attribute2"));
         attribute3Column.setCellValueFactory(new PropertyValueFactory("attribute3"));
 
-        thetable.getColumns().add( attribute1Column);
-        thetable.getColumns().add( attribute2Column);
-        thetable.getColumns().add( attribute3Column);
+        thetable.getItems().addAll(Model.getMembers());
 
 
 
