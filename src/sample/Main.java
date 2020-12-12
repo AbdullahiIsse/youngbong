@@ -27,8 +27,6 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
 
 
-
-
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
 
             public void handle(MouseEvent event) {
@@ -47,8 +45,6 @@ public class Main extends Application {
 
         primaryStage.show();
     }
-
-
 
 
     public static void main(String[] args) {

@@ -28,10 +28,6 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
 
 
-
-
-
-
     public void loadback(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
             "gui/sample.fxml"));
