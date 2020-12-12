@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KundeController">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TeamMedlemController">
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="188.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
@@ -64,7 +64,9 @@
          <columns>
             <TableColumn fx:id="Fornavn" prefWidth="75.0" text="Fornavn" />
             <TableColumn fx:id="Efternavn" prefWidth="75.0" text="Efternavn" />
+            <TableColumn fx:id="Rolle" prefWidth="96.0" text="Rolle" />
             <TableColumn fx:id="Telefonnummer" prefWidth="96.0" text="Telefonnummer" />
+            <TableColumn fx:id="TeammedlemId" prefWidth="96.0" text="TeammedlemId" />
          </columns></TableView>
    </children>
 </AnchorPane>
