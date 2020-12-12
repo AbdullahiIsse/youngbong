@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.forsideController">
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
-            <Button mnemonicParsing="false" onAction="#loadback" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
+            <Button mnemonicParsing="false"  prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font></Button>

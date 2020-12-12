@@ -11,4 +11,28 @@ public class Kunde
     Efternavn = efternavn;
     Telefonnummer = telefonnummer;
   }
+
+  public String getFornavn() {
+    return Fornavn;
+  }
+
+  public void setFornavn(String fornavn) {
+    Fornavn = fornavn;
+  }
+
+  public String getEfternavn() {
+    return Efternavn;
+  }
+
+  public void setEfternavn(String efternavn) {
+    Efternavn = efternavn;
+  }
+
+  public int getTelefonnummer() {
+    return Telefonnummer;
+  }
+
+  public void setTelefonnummer(int telefonnummer) {
+    Telefonnummer = telefonnummer;
+  }
 }

@@ -5,9 +5,12 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sample.metoder.Kunde;
 
 public class Main extends Application {
     private double xOffset = 0;
@@ -22,6 +25,10 @@ public class Main extends Application {
         primaryStage.setResizable(false);
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
+
+
+
+
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
 
             public void handle(MouseEvent event) {
@@ -40,6 +47,8 @@ public class Main extends Application {
 
         primaryStage.show();
     }
+
+
 
 
     public static void main(String[] args) {
