@@ -50,6 +50,7 @@ public class TeamMedlemController implements Initializable {
         Rolle.setCellValueFactory(new PropertyValueFactory<Teammedlem, String>("Rolle"));
         Telefonnummer.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("Telefonnummer"));
         TeammedlemId.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("TeammedlemId"));
+        tableTeammedlem.setEditable(true);
         tableTeammedlem.setItems(list);
 
         Fornavn.setCellFactory(TextFieldTableCell.forTableColumn());
