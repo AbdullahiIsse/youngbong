@@ -36,6 +36,11 @@ public class TeamMedlemController implements Initializable {
     private TableColumn<Teammedlem, Integer> Telefonnummer;
     @FXML
     private TableColumn<Teammedlem, Integer> TeammedlemId;
+    public void add(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/Teammedlemstage.fxml"));
+        rootpane.getChildren().setAll(pane);
+    }
 
     public ObservableList<Teammedlem> list = FXCollections.observableArrayList(
             new Teammedlem("tom", "ben", "hej", 10, 200),
@@ -55,6 +60,7 @@ public class TeamMedlemController implements Initializable {
         Rolle.setCellValueFactory(new PropertyValueFactory<Teammedlem, String>("Rolle"));
         Telefonnummer.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("Telefonnummer"));
         TeammedlemId.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("TeammedlemId"));
+        tableTeammedlem.setEditable(true);
         tableTeammedlem.setItems(list);
 
         Fornavn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -64,6 +70,7 @@ public class TeamMedlemController implements Initializable {
         TeammedlemId.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
 
     };
+
 
     public void loadback(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
@@ -77,7 +84,6 @@ public class TeamMedlemController implements Initializable {
     }
 
 
-
     public void Editfornavn(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
         Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
         teammedlem.setFornavn(teammedlemStringCellEditEvent.getNewValue());
@@ -85,12 +91,14 @@ public class TeamMedlemController implements Initializable {
 
     public void editefternavn(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
         Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
-        teammedlem.getEfternavn(teammedlemStringCellEditEvent.getNewValue());
+        teammedlem.setEfternavn(teammedlemStringCellEditEvent.getNewValue());
     }
+
+    //pushlknlkn
 
     public void editrolle(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
         Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
-        teammedlem.getRolle(teammedlemStringCellEditEvent.getNewValue());
+        teammedlem.setRolle(teammedlemStringCellEditEvent.getNewValue());
     }
 
     public void edittelefon(TableColumn.CellEditEvent<Teammedlem, Integer> teammedlemIntegerCellEditEvent) {
@@ -110,10 +118,5 @@ public class TeamMedlemController implements Initializable {
         sletMedlemer.forEach(sletMedlem::remove);
     }
 
-    public void add(ActionEvent actionEvent) throws IOException {
 
-        AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/TeammedlemStage.fxml"));
-        rootpane.getChildren().setAll(pane);
-    }
 }

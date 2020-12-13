@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Teammedlemstagecontroller">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Teammedlemstagecontroller">
    <children>
-      <TextField layoutX="422.0" layoutY="56.0" prefHeight="27.0" prefWidth="122.0" promptText="Fornavn" />
-      <TextField layoutX="422.0" layoutY="96.0" prefHeight="27.0" prefWidth="122.0" promptText="Efternavn" />
-      <TextField layoutX="422.0" layoutY="138.0" prefHeight="27.0" prefWidth="122.0" promptText="Rolle" />
-      <TextField layoutX="422.0" layoutY="222.0" prefHeight="27.0" prefWidth="122.0" promptText="TeammedlemId" />
-      <TextField layoutX="422.0" layoutY="183.0" prefHeight="27.0" prefWidth="122.0" promptText="Telefonnummer" />
+      <TextField fx:id="fornavnid" layoutX="422.0" layoutY="56.0" prefHeight="27.0" prefWidth="122.0" promptText="Fornavn" />
+      <TextField fx:id="efternavnid" layoutX="422.0" layoutY="96.0" prefHeight="27.0" prefWidth="122.0" promptText="Efternavn" />
+      <TextField fx:id="rolleid" layoutX="422.0" layoutY="138.0" prefHeight="27.0" prefWidth="122.0" promptText="Rolle" />
+      <TextField fx:id="teammedlemid" layoutX="422.0" layoutY="222.0" prefHeight="27.0" prefWidth="122.0" promptText="TeammedlemId" />
+      <TextField fx:id="telefonnummerid" layoutX="422.0" layoutY="183.0" prefHeight="27.0" prefWidth="122.0" promptText="Telefonnummer" />
       <VBox prefHeight="400.0" prefWidth="194.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
             <Button mnemonicParsing="false" onAction="#loadback" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
@@ -43,7 +43,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Back" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Back" textFill="WHITE">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>
