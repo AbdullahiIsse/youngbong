@@ -16,10 +16,9 @@ public class Main extends Application {
     private double xOffset = 0;
     private double yOffset = 0;
 
-
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("gui/team.fxml"));
         primaryStage.setTitle("Colour IT");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
@@ -45,7 +44,6 @@ public class Main extends Application {
 
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

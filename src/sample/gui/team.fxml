@@ -36,7 +36,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#RemoveTeammedlem" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
@@ -60,13 +60,14 @@
             </Button>
          </children>
       </VBox>
-      <TableView fx:id="table" layoutX="186.0" prefHeight="400.0" prefWidth="415.0">
+      <TableView fx:id="tableTeammedlem" layoutX="186.0" prefHeight="400.0" prefWidth="415.0">
          <columns>
-            <TableColumn fx:id="Fornavn" prefWidth="75.0" text="Fornavn" />
-            <TableColumn fx:id="Efternavn" prefWidth="75.0" text="Efternavn" />
-            <TableColumn fx:id="Rolle" prefWidth="96.0" text="Rolle" />
-            <TableColumn fx:id="Telefonnummer" prefWidth="96.0" text="Telefonnummer" />
-            <TableColumn fx:id="TeammedlemId" prefWidth="96.0" text="TeammedlemId" />
-         </columns></TableView>
+            <TableColumn fx:id="Fornavn" onEditCommit="#Editfornavn" prefWidth="75.0" text="Fornavn" />
+            <TableColumn fx:id="Efternavn" onEditCommit="#editefternavn" prefWidth="75.0" text="Efternavn" />
+            <TableColumn fx:id="Rolle" onEditCommit="#editrolle" prefWidth="96.0" text="Rolle" />
+            <TableColumn fx:id="Telefonnummer" onEditCommit="#edittelefon" prefWidth="96.0" text="Telefonnummer" />
+            <TableColumn fx:id="TeammedlemId" onEditCommit="#editteamedlem" prefWidth="96.0" text="TeammedlemId" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

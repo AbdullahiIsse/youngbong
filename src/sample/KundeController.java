@@ -28,20 +28,11 @@ public class KundeController implements Initializable {
     @FXML
     private AnchorPane rootpane;
     @FXML
-    private TextField textField;
-    @FXML
-    private Button btnsave;
+    private Button add;
     @FXML private TableView<Kunde>table;
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
-
-
-
-
-
-
-
 
 
     public void loadback(ActionEvent actionEvent) throws IOException {
@@ -50,13 +41,10 @@ public class KundeController implements Initializable {
         rootpane.getChildren().setAll(pane);
     }
 
-
-
     public void musklik(MouseEvent mouseEvent) {
 
         System.exit(0);
     }
-
 
     public ObservableList<Kunde>list = FXCollections.observableArrayList(
             new Kunde("tom","ben", 12345678),
@@ -65,8 +53,6 @@ public class KundeController implements Initializable {
             new Kunde("tom","ben", 12345678)
 
     );
-
-
 
     public void initialize(URL location, ResourceBundle rb){
 
@@ -79,7 +65,6 @@ public class KundeController implements Initializable {
             public void handle(TableColumn.CellEditEvent<Kunde, String> kundeStringCellEditEvent) {
                 Kunde kunde = kundeStringCellEditEvent.getRowValue();
                 kunde.setFornavn(kundeStringCellEditEvent.getNewValue());
-
             }
         });
 
@@ -92,7 +77,6 @@ public class KundeController implements Initializable {
                 Kunde kunde = kundeStringCellEditEvent.getRowValue();
                 kunde.setEfternavn(kundeStringCellEditEvent.getNewValue());
 
-
             }
         });
 
@@ -103,17 +87,13 @@ public class KundeController implements Initializable {
             public void handle(TableColumn.CellEditEvent<Kunde, Integer> kundeIntegerCellEditEvent) {
                 Kunde kunde = kundeIntegerCellEditEvent.getRowValue();
                 kunde.setTelefonnummer(kundeIntegerCellEditEvent.getNewValue());
-
+                list.setAll();
             }
         });
 
-
         table.setItems(list);
 
-
     }
-
-
 
     public void Add(ActionEvent actionEvent) throws IOException {
 
@@ -128,12 +108,5 @@ public class KundeController implements Initializable {
         sletOpgave=table.getItems();
         sletOpgaver=table.getSelectionModel().getSelectedItems();
         sletOpgaver.forEach(sletOpgave::remove);
-    }
-
-
-    public void save(ActionEvent actionEvent) {
-         {
-
-        }
     }
 }
