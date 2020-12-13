@@ -14,4 +14,44 @@ public class Teammedlem
     Telefonnummer = telefonnummer;
     TeammedlemId = teammedlemId;
   }
+
+  public String getFornavn() {
+    return Fornavn;
+  }
+
+  public void setFornavn(String fornavn) {
+    Fornavn = fornavn;
+  }
+
+  public String getEfternavn() {
+    return Efternavn;
+  }
+
+  public void setEfternavn(String efternavn) {
+    Efternavn = efternavn;
+  }
+
+  public String getRolle() {
+    return Rolle;
+  }
+
+  public void setRolle(String rolle) {
+    Rolle = rolle;
+  }
+
+  public int getTelefonnummer() {
+    return Telefonnummer;
+  }
+
+  public void setTelefonnummer(int telefonnummer) {
+    Telefonnummer = telefonnummer;
+  }
+
+  public int getTeammedlemId() {
+    return TeammedlemId;
+  }
+
+  public void setTeammedlemId(int teammedlemId) {
+    TeammedlemId = teammedlemId;
+  }
 }
