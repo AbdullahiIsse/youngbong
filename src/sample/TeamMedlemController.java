@@ -109,4 +109,11 @@ public class TeamMedlemController implements Initializable {
         sletMedlemer=tableTeammedlem.getSelectionModel().getSelectedItems();
         sletMedlemer.forEach(sletMedlem::remove);
     }
+
+    public void add(ActionEvent actionEvent) throws IOException {
+
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/TeammedlemStage.fxml"));
+        rootpane.getChildren().setAll(pane);
+    }
 }
