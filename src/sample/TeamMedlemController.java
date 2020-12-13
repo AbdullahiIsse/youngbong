@@ -100,4 +100,11 @@ public class TeamMedlemController implements Initializable {
    Teammedlem teammedlem = teammedlemIntegerCellEditEvent.getRowValue();
         teammedlem.setTeammedlemId(teammedlemIntegerCellEditEvent.getNewValue());
     }
+
+    public void RemoveTeammedlem(ActionEvent actionEvent) {
+        ObservableList<Teammedlem>sletMedlem, sletMedlemer;
+        sletMedlem=table.getItems();
+        sletMedlemer=table.getSelectionModel().getSelectedItems();
+        sletMedlemer.forEach(sletMedlem::remove);
+    }
 }
