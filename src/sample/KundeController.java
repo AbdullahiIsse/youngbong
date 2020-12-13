@@ -86,7 +86,7 @@ public class KundeController implements Initializable {
             public void handle(TableColumn.CellEditEvent<Kunde, Integer> kundeIntegerCellEditEvent) {
                 Kunde kunde = kundeIntegerCellEditEvent.getRowValue();
                 kunde.setTelefonnummer(kundeIntegerCellEditEvent.getNewValue());
-                list.setAll();
+
             }
         });
 
