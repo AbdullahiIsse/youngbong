@@ -9,7 +9,7 @@
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#loadback" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Close" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#musklik" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Close" textFill="WHITE">
                <padding>
                   <Insets top="10.0" />
                </padding>

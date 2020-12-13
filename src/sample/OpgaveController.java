@@ -11,6 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.converter.IntegerStringConverter;
 import sample.metoder.Kunde;
@@ -84,6 +85,20 @@ public class OpgaveController implements Initializable {
     }
     public void Nyside(ActionEvent actionEvent) {
     }
+
+    public void loadback(ActionEvent actionEvent) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/sample.fxml"));
+        rootpane.getChildren().setAll(pane);
+    }
+
+    public void musklik(MouseEvent mouseEvent) {
+
+        System.exit(0);
+    }
+
+
+
 }
 
 

@@ -67,6 +67,7 @@
             <TableColumn fx:id="Rolle" onEditCommit="#editrolle" prefWidth="96.0" text="Rolle" />
             <TableColumn fx:id="Telefonnummer" onEditCommit="#edittelefon" prefWidth="96.0" text="Telefonnummer" />
             <TableColumn fx:id="TeammedlemId" onEditCommit="#editteamedlem" prefWidth="96.0" text="TeammedlemId" />
-         </columns></TableView>
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -35,25 +35,16 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
 
 
-
-
-
-
-
-
     public void loadback(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
             "gui/sample.fxml"));
         rootpane.getChildren().setAll(pane);
     }
 
-
-
     public void musklik(MouseEvent mouseEvent) {
 
         System.exit(0);
     }
-
 
     public ObservableList<Kunde>list = FXCollections.observableArrayList(
             new Kunde("tom","ben", 12345678),
@@ -62,8 +53,6 @@ public class KundeController implements Initializable {
             new Kunde("tom","ben", 12345678)
 
     );
-
-
 
     public void initialize(URL location, ResourceBundle rb){
 
@@ -104,9 +93,7 @@ public class KundeController implements Initializable {
 
         table.setItems(list);
 
-
     }
-
 
     public void Add(ActionEvent actionEvent) throws IOException {
 

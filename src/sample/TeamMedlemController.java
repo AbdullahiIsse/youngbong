@@ -44,12 +44,12 @@ public class TeamMedlemController implements Initializable {
         Telefonnummer.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("Telefonnummer"));
         TeammedlemId.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("TeammedlemId"));
         tableTeammedlem.setItems(list);
+
         Fornavn.setCellFactory(TextFieldTableCell.forTableColumn());
         Efternavn.setCellFactory(TextFieldTableCell.forTableColumn());
         Rolle.setCellFactory(TextFieldTableCell.forTableColumn());
         Telefonnummer.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         TeammedlemId.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-
 
     };
 
@@ -59,22 +59,17 @@ public class TeamMedlemController implements Initializable {
         rootpane.getChildren().setAll(pane);
     }
 
-
     public void musklik(MouseEvent mouseEvent) {
 
         System.exit(0);
     }
-
 
     public ObservableList<Teammedlem> list = FXCollections.observableArrayList(
             new Teammedlem("tom", "ben", "hej", 10, 200),
             new Teammedlem("tom", "ben", "hej", 10, 200),
             new Teammedlem("tom", "ben", "hej", 10, 200),
             new Teammedlem("tom", "ben", "hej", 10, 200)
-
     );
-
-
 
     public void Editfornavn(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
         Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
