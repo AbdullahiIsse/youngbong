@@ -23,7 +23,7 @@ public class Teammedlem
     Fornavn = fornavn;
   }
 
-  public String getEfternavn() {
+  public String getEfternavn(String newValue) {
     return Efternavn;
   }
 
@@ -31,7 +31,7 @@ public class Teammedlem
     Efternavn = efternavn;
   }
 
-  public String getRolle() {
+  public String getRolle(String newValue) {
     return Rolle;
   }
 

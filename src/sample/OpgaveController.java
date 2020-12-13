@@ -3,13 +3,17 @@ package sample;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.converter.IntegerStringConverter;
+import sample.metoder.Kunde;
 import sample.metoder.Opgaver;
 
 
@@ -43,6 +47,11 @@ public class OpgaveController implements Initializable {
         estimat.setCellValueFactory(new PropertyValueFactory<Opgaver, Integer>("Estimat"));
         prioritetsniveau.setCellValueFactory(new PropertyValueFactory<Opgaver, String>("Prioritetsniveau"));
         tableViewOpgaver.setItems(Opgaveliste);
+        tableViewOpgaver.setEditable(true);
+        opgavetekst.setCellFactory(TextFieldTableCell.forTableColumn());
+        Krav.setCellFactory(TextFieldTableCell.forTableColumn());
+        estimat.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        prioritetsniveau.setCellFactory(TextFieldTableCell.forTableColumn());
 
     }
 
@@ -52,6 +61,28 @@ public class OpgaveController implements Initializable {
         sletOpgave=tableViewOpgaver.getItems();
         sletOpgaver=tableViewOpgaver.getSelectionModel().getSelectedItems();
         sletOpgaver.forEach(sletOpgave::remove);
+    }
+
+    public void OneditOpgavetekst(TableColumn.CellEditEvent<Opgaver, String> opgaverStringCellEditEvent) {
+        Opgaver opgave=tableViewOpgaver.getSelectionModel().getSelectedItem();
+       opgave.setOpgavetekst(opgaverStringCellEditEvent.getNewValue());
+    }
+
+    public void OneditOpgavekrav(TableColumn.CellEditEvent<Opgaver, String> opgaverStringCellEditEvent) {
+        Opgaver opgave=tableViewOpgaver.getSelectionModel().getSelectedItem();
+        opgave.setKrav(opgaverStringCellEditEvent.getNewValue());
+    }
+
+    public void OneditOpgaveestimat(TableColumn.CellEditEvent<Opgaver, Integer> opgaverIntegerCellEditEvent) {
+        Opgaver opgaver = opgaverIntegerCellEditEvent.getRowValue();
+        opgaver.setEstimat(opgaverIntegerCellEditEvent.getNewValue());
+    }
+
+    public void OneditOpgaveprio(TableColumn.CellEditEvent<Opgaver, String> opgaverStringCellEditEvent) {
+        Opgaver opgave=tableViewOpgaver.getSelectionModel().getSelectedItem();
+        opgave.setPrioritetsniveau(opgaverStringCellEditEvent.getNewValue());
+    }
+    public void Nyside(ActionEvent actionEvent) {
     }
 }
 

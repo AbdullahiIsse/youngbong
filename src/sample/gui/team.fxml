@@ -62,11 +62,11 @@
       </VBox>
       <TableView fx:id="table" layoutX="186.0" prefHeight="400.0" prefWidth="415.0">
          <columns>
-            <TableColumn fx:id="Fornavn" prefWidth="75.0" text="Fornavn" />
-            <TableColumn fx:id="Efternavn" prefWidth="75.0" text="Efternavn" />
-            <TableColumn fx:id="Rolle" prefWidth="96.0" text="Rolle" />
-            <TableColumn fx:id="Telefonnummer" prefWidth="96.0" text="Telefonnummer" />
-            <TableColumn fx:id="TeammedlemId" prefWidth="96.0" text="TeammedlemId" />
+            <TableColumn fx:id="Fornavn" onEditCommit="#Editfornavn" prefWidth="75.0" text="Fornavn" />
+            <TableColumn fx:id="Efternavn" onEditCommit="#editefternavn" prefWidth="75.0" text="Efternavn" />
+            <TableColumn fx:id="Rolle" onEditCommit="#editrolle" prefWidth="96.0" text="Rolle" />
+            <TableColumn fx:id="Telefonnummer" onEditCommit="#edittelefon" prefWidth="96.0" text="Telefonnummer" />
+            <TableColumn fx:id="TeammedlemId" onEditCommit="#editteamedlem" prefWidth="96.0" text="TeammedlemId" />
          </columns></TableView>
    </children>
 </AnchorPane>
