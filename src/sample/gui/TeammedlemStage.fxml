@@ -32,7 +32,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="192.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Cancel" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="192.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Cancel" textFill="WHITE">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
@@ -43,7 +43,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Back" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Submit" textFill="WHITE">
                <VBox.margin>
                   <Insets top="50.0" />
                </VBox.margin>

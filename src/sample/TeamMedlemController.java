@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -117,6 +118,21 @@ public class TeamMedlemController implements Initializable {
         sletMedlemer=tableTeammedlem.getSelectionModel().getSelectedItems();
         sletMedlemer.forEach(sletMedlem::remove);
     }
+
+    public void addDataObject(Teammedlem teammedlem)
+    {
+        ObservableList<Teammedlem>team;
+        list.add(teammedlem);
+    }
+
+    public void createNew() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/TeammedlemStage.fxml"));
+        rootpane.getChildren().setAll(pane);
+
+    }
+
+
 
 
 }

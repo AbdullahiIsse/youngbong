@@ -52,4 +52,9 @@ public class Teammedlem
   public void setTeammedlemId(int teammedlemId) {
     TeammedlemId = teammedlemId;
   }
+
+
+
+
+
 }

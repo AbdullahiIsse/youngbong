@@ -23,6 +23,7 @@ public class Teammedlemstagecontroller  {
     @FXML
     private TextField telefonnummerid;
    @FXML private TextField teammedlemid;
+   private Teammedlem team;
 
 
     @FXML private ObservableList<Teammedlem> list;
@@ -59,4 +60,40 @@ public class Teammedlemstagecontroller  {
     public void setTableItems(ObservableList<Teammedlem> tableItems) {
         this.list = tableItems ;
     }
+
+    public void submit() throws IOException {
+        String Fornavn = fornavnid.getText();
+        String Efternavn = efternavnid.getText();
+        String rolle = rolleid.getText();
+        int Telefonnummerid = Integer.parseInt(telefonnummerid.getText());
+        int Teammedlemid = Integer.parseInt(teammedlemid.getText());
+
+
+        if(team == null)
+        {
+            Teammedlem teammedlem = new Teammedlem(Fornavn, Efternavn, rolle,Telefonnummerid,Teammedlemid);
+            list.add(teammedlem);
+        }
+
+        else
+        {
+           team.setFornavn(Fornavn);
+           team.setEfternavn(Efternavn);
+           team.setRolle(rolle);
+           team.setTelefonnummer(Telefonnummerid);
+           team.setTeammedlemId(Teammedlemid);
+
+
+        }
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/team.fxml"));
+        rootpane.getChildren().setAll(pane);
+
+
+
+    }
+
+
+
+
 }
