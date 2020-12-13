@@ -39,7 +39,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#save" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Save" textFill="WHITE">
+            <Button mnemonicParsing="false"  prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Save" textFill="WHITE">
                <padding>
                   <Insets top="10.0" />
                </padding>

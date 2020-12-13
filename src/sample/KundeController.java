@@ -27,8 +27,7 @@ import java.util.ResourceBundle;
 public class KundeController implements Initializable {
     @FXML
     private AnchorPane rootpane;
-    @FXML
-    private Button add;
+
     @FXML private TableView<Kunde>table;
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
