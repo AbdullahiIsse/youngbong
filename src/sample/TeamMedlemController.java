@@ -25,7 +25,7 @@ public class TeamMedlemController implements Initializable {
     @FXML
     private AnchorPane rootpane;
     @FXML
-    private TableView<Teammedlem> table;
+    private TableView<Teammedlem> tableTeammedlem;
     @FXML
     private TableColumn<Teammedlem, String> Fornavn;
     @FXML
@@ -43,7 +43,7 @@ public class TeamMedlemController implements Initializable {
         Rolle.setCellValueFactory(new PropertyValueFactory<Teammedlem, String>("Rolle"));
         Telefonnummer.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("Telefonnummer"));
         TeammedlemId.setCellValueFactory(new PropertyValueFactory<Teammedlem, Integer>("TeammedlemId"));
-        table.setItems(list);
+        tableTeammedlem.setItems(list);
         Fornavn.setCellFactory(TextFieldTableCell.forTableColumn());
         Efternavn.setCellFactory(TextFieldTableCell.forTableColumn());
         Rolle.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -77,17 +77,17 @@ public class TeamMedlemController implements Initializable {
 
 
     public void Editfornavn(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
-        Teammedlem teammedlem=table.getSelectionModel().getSelectedItem();
+        Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
         teammedlem.setFornavn(teammedlemStringCellEditEvent.getNewValue());
     }
 
     public void editefternavn(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
-        Teammedlem teammedlem=table.getSelectionModel().getSelectedItem();
+        Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
         teammedlem.getEfternavn(teammedlemStringCellEditEvent.getNewValue());
     }
 
     public void editrolle(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
-        Teammedlem teammedlem=table.getSelectionModel().getSelectedItem();
+        Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();
         teammedlem.getRolle(teammedlemStringCellEditEvent.getNewValue());
     }
 
@@ -103,8 +103,8 @@ public class TeamMedlemController implements Initializable {
 
     public void RemoveTeammedlem(ActionEvent actionEvent) {
         ObservableList<Teammedlem>sletMedlem, sletMedlemer;
-        sletMedlem=table.getItems();
-        sletMedlemer=table.getSelectionModel().getSelectedItems();
+        sletMedlem=tableTeammedlem.getItems();
+        sletMedlemer=tableTeammedlem.getSelectionModel().getSelectedItems();
         sletMedlemer.forEach(sletMedlem::remove);
     }
 }
