@@ -5,9 +5,7 @@ public class Teammedlem
   private String Fornavn,Efternavn,Rolle;
   private int Telefonnummer,TeammedlemId;
 
-  public Teammedlem(String fornavn, String efternavn, String rolle,
-      int telefonnummer, int teammedlemId)
-  {
+  public Teammedlem(String fornavn, String efternavn, String rolle, int telefonnummer, int teammedlemId) {
     Fornavn = fornavn;
     Efternavn = efternavn;
     Rolle = rolle;
@@ -23,7 +21,7 @@ public class Teammedlem
     Fornavn = fornavn;
   }
 
-  public String getEfternavn(String newValue) {
+  public String getEfternavn() {
     return Efternavn;
   }
 
@@ -31,7 +29,7 @@ public class Teammedlem
     Efternavn = efternavn;
   }
 
-  public String getRolle(String newValue) {
+  public String getRolle() {
     return Rolle;
   }
 
