@@ -14,13 +14,24 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
 import sample.metoder.Opgaver;
 import sample.metoder.Teammedlem;
 
+import javax.crypto.Mac;
+import javax.swing.*;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class TeamMedlemController implements Initializable {
     public TextField Efternavn1;
@@ -42,6 +53,10 @@ public class TeamMedlemController implements Initializable {
     private TableColumn<Teammedlem, Integer> Telefonnummer;
     @FXML
     private TableColumn<Teammedlem, Integer> TeammedlemId;
+    private Window primaryStage;
+    private Teammedlem Teammedlem;
+
+
     public void add(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
                 "gui/Teammedlemstage.fxml"));
@@ -74,6 +89,9 @@ public class TeamMedlemController implements Initializable {
         Rolle.setCellFactory(TextFieldTableCell.forTableColumn());
         Telefonnummer.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         TeammedlemId.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+
+
+
 
     };
 
@@ -129,4 +147,41 @@ public class TeamMedlemController implements Initializable {
         Teammedlem teammedlem = new Teammedlem(Fornavn1.getText(), Efternavn1.getText(),Rolle1.getText(),Integer.parseInt(Tel1.getText()),Integer.parseInt(teamID1.getText()));
         tableTeammedlem.getItems().add(teammedlem);
     }
+
+    public void save(ActionEvent actionEvent) {
+
+        FileChooser fileChooser = new FileChooser();
+
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+
+        File file = fileChooser.showSaveDialog(primaryStage);
+
+        if(file != null){
+            SaveFile(tableTeammedlem, file);
+        }
+
+    }
+
+    private void SaveFile(TableView<sample.metoder.Teammedlem> teammedlem, File file) {
+
+
+        try {
+            FileWriter fileWriter;
+
+            fileWriter = new FileWriter(file);
+            fileWriter.write(String.valueOf(teammedlem));
+            fileWriter.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Teammedlem.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+
+
+
+
 }

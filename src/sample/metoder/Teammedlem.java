@@ -53,8 +53,14 @@ public class Teammedlem
     TeammedlemId = teammedlemId;
   }
 
-
-
-
-
+  @Override
+  public String toString() {
+    return "Teammedlem{" +
+            "Fornavn='" + Fornavn + '\'' +
+            ", Efternavn='" + Efternavn + '\'' +
+            ", Rolle='" + Rolle + '\'' +
+            ", Telefonnummer=" + Telefonnummer +
+            ", TeammedlemId=" + TeammedlemId +
+            '}';
+  }
 }

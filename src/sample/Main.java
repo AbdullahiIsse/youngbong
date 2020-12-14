@@ -31,6 +31,7 @@ public class Main extends Application {
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
+
             }
         });
 
@@ -41,6 +42,8 @@ public class Main extends Application {
                 primaryStage.setY(event.getScreenY() - yOffset);
             }
         });
+
+
 
         primaryStage.show();
     }
