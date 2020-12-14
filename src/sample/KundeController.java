@@ -15,14 +15,21 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
 import sample.metoder.Kunde;
+import sample.metoder.Opgaver;
 import sample.metoder.Teammedlem;
 
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class KundeController implements Initializable {
@@ -36,6 +43,7 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
+    private Window primaryStage;
 
 
     public void loadback(ActionEvent actionEvent) throws IOException {
@@ -109,5 +117,39 @@ public class KundeController implements Initializable {
         sletOpgave=table.getItems();
         sletOpgaver=table.getSelectionModel().getSelectedItems();
         sletOpgaver.forEach(sletOpgave::remove);
+    }
+
+    public void save(ActionEvent actionEvent) {
+        FileChooser fileChooser = new FileChooser();
+
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+
+        File file = fileChooser.showSaveDialog(primaryStage);
+
+        if(file != null){
+            SaveFile(table, file);
+        }
+
+
+
+
+    }
+
+    private void SaveFile(TableView<Kunde> table, File file) {
+        try {
+            FileWriter fileWriter;
+
+            fileWriter = new FileWriter(file);
+            fileWriter.write(String.valueOf(table));
+            fileWriter.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Kunde.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+
     }
 }

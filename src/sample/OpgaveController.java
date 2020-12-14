@@ -15,14 +15,21 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
 import sample.metoder.Kunde;
 import sample.metoder.Opgaver;
+import sample.metoder.Teammedlem;
 
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class OpgaveController implements Initializable {
     public TextField opgavetekst1;
@@ -42,6 +49,7 @@ public class OpgaveController implements Initializable {
     private TableColumn<Opgaver, Integer> estimat;
     @FXML
     private TableColumn<Opgaver, String> prioritetsniveau;
+    private Window primaryStage;
 
 
 
@@ -49,6 +57,7 @@ public class OpgaveController implements Initializable {
             new Opgaver("tom", "ben", 12345678, "Høj"),
             new Opgaver("tom", "ben", 12345678, "lav")
     );
+
 
 
     public void initialize(URL location, ResourceBundle rb) {
@@ -108,6 +117,40 @@ public class OpgaveController implements Initializable {
         sletOpgave=tableViewOpgaver.getItems();
         sletOpgaver=tableViewOpgaver.getSelectionModel().getSelectedItems();
         sletOpgaver.forEach(sletOpgave::remove);
+    }
+
+    public void save(ActionEvent actionEvent) {
+
+        FileChooser fileChooser = new FileChooser();
+
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+
+        File file = fileChooser.showSaveDialog(primaryStage);
+
+        if(file != null){
+            SaveFile(tableViewOpgaver, file);
+        }
+    }
+
+    private void SaveFile(TableView<Opgaver> tableViewOpgaver, File file) {
+        try {
+            FileWriter fileWriter;
+
+            fileWriter = new FileWriter(file);
+            fileWriter.write(String.valueOf(tableViewOpgaver));
+            fileWriter.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Opgaver.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+
+
+
+
     }
 }
 
