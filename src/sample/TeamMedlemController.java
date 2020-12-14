@@ -23,6 +23,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TeamMedlemController implements Initializable {
+    public TextField Efternavn1;
+    public TextField Fornavn1;
+    public TextField Rolle1;
+    public TextField Tel1;
+    public TextField teamID1;
     @FXML
     private AnchorPane rootpane;
     @FXML
@@ -119,20 +124,9 @@ public class TeamMedlemController implements Initializable {
         sletMedlemer.forEach(sletMedlem::remove);
     }
 
-    public void addDataObject(Teammedlem teammedlem)
-    {
-        ObservableList<Teammedlem>team;
-        list.add(teammedlem);
+
+    public void createNew(ActionEvent actionEvent) {
+        Teammedlem teammedlem = new Teammedlem(Fornavn1.getText(), Efternavn1.getText(),Rolle1.getText(),Integer.parseInt(Tel1.getText()),Integer.parseInt(teamID1.getText()));
+        tableTeammedlem.getItems().add(teammedlem);
     }
-
-    public void createNew() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/TeammedlemStage.fxml"));
-        rootpane.getChildren().setAll(pane);
-
-    }
-
-
-
-
 }

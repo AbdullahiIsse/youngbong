@@ -71,9 +71,9 @@
             <TableColumn fx:id="estimat" onEditCommit="#OneditOpgaveestimat" prefWidth="100.0" text="Tids estimat" />
             <TableColumn fx:id="prioritetsniveau" onEditCommit="#OneditOpgaveprio" prefWidth="105.0" text="Prioritetsniveau" />
          </columns></TableView>
-      <TextField fx:id="opgavetekst" layoutX="631.0" layoutY="45.0" prefHeight="27.0" prefWidth="149.0" promptText="Opgavetekst" />
-      <TextField fx:id="krav" layoutX="634.0" layoutY="124.0" prefHeight="27.0" prefWidth="155.0" promptText="Krav" />
-      <TextField fx:id="tidsestimat" layoutX="634.0" layoutY="200.0" prefHeight="27.0" prefWidth="155.0" promptText="Tids estimat" />
-      <TextField fx:id="Prioritetsniveau" layoutX="634.0" layoutY="291.0" prefHeight="27.0" prefWidth="155.0" promptText="Prioritetsniveau" />
+      <TextField fx:id="opgavetekst1" layoutX="631.0" layoutY="45.0" prefHeight="27.0" prefWidth="149.0" promptText="Opgavetekst" />
+      <TextField fx:id="krav1" layoutX="634.0" layoutY="124.0" prefHeight="27.0" prefWidth="155.0" promptText="Krav" />
+      <TextField fx:id="tidsestimat1" layoutX="634.0" layoutY="200.0" prefHeight="27.0" prefWidth="155.0" promptText="Tids estimat" />
+      <TextField fx:id="Prioritetsniveau1" layoutX="634.0" layoutY="291.0" prefHeight="27.0" prefWidth="155.0" promptText="Prioritetsniveau" />
    </children>
 </AnchorPane>

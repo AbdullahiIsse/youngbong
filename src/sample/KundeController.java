@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.converter.IntegerStringConverter;
 import sample.metoder.Kunde;
+import sample.metoder.Teammedlem;
 
 
 import java.io.IOException;
@@ -25,6 +26,9 @@ import java.util.ResourceBundle;
 
 
 public class KundeController implements Initializable {
+    public TextField fornavn1;
+    public TextField efternavn1;
+    public TextField telefonnummer1;
     @FXML
     private AnchorPane rootpane;
 
@@ -94,11 +98,9 @@ public class KundeController implements Initializable {
 
     }
 
-    public void Add(ActionEvent actionEvent) throws IOException {
-
-        AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/Kundestage.fxml"));
-        rootpane.getChildren().setAll(pane);
+    public void Add(ActionEvent actionEvent) {
+        Kunde kunde = new Kunde(fornavn1.getText(), efternavn1.getText(),Integer.parseInt(telefonnummer1.getText()));
+        table.getItems().add(kunde);
     }
 
     public void remove(ActionEvent actionEvent) {

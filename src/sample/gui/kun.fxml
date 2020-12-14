@@ -59,8 +59,8 @@
             <TableColumn fx:id="Efternavn" prefWidth="120.0" text="Efternavn" />
             <TableColumn fx:id="Telefonnummer" prefWidth="166.0" text="Telefonnummer" />
          </columns></TableView>
-      <TextField fx:id="fornavn" layoutX="623.0" layoutY="44.0" promptText="Fornavn" />
-      <TextField fx:id="efternavn" layoutX="623.0" layoutY="150.0" promptText="Efternavn" />
-      <TextField fx:id="telefonnummer" layoutX="623.0" layoutY="268.0" promptText="Telefonnummer" />
+      <TextField fx:id="fornavn1" layoutX="623.0" layoutY="44.0" promptText="Fornavn" />
+      <TextField fx:id="efternavn1" layoutX="623.0" layoutY="150.0" promptText="Efternavn" />
+      <TextField fx:id="telefonnummer1" layoutX="623.0" layoutY="268.0" promptText="Telefonnummer" />
    </children>
 </AnchorPane>

@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
@@ -23,6 +24,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OpgaveController implements Initializable {
+    public TextField opgavetekst1;
+    public TextField krav1;
+    public TextField tidsestimat1;
+    public TextField Prioritetsniveau1;
     @FXML
     private AnchorPane rootpane;
     @FXML
@@ -35,11 +40,7 @@ public class OpgaveController implements Initializable {
     private TableColumn<Opgaver, Integer> estimat;
     @FXML
     private TableColumn<Opgaver, String> prioritetsniveau;
-    public void Nyside(ActionEvent actionEvent) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/OpgaveStage.fxml"));
-        rootpane.getChildren().setAll(pane);
-    }
+
 
 
     public ObservableList<Opgaver> Opgaveliste = FXCollections.observableArrayList(
@@ -101,8 +102,10 @@ public class OpgaveController implements Initializable {
         System.exit(0);
     }
 
-
-
+    public void Nyside(ActionEvent actionEvent) {
+        Opgaver opgave = new Opgaver(opgavetekst1.getText(), krav1.getText(),Integer.parseInt(tidsestimat1.getText()),Prioritetsniveau1.getText());
+        tableViewOpgaver.getItems().add(opgave);
+    }
 }
 
 
