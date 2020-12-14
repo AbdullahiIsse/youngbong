@@ -70,7 +70,7 @@
             <TextField fx:id="Rolle1" layoutX="10.0" layoutY="173.0" prefHeight="27.0" prefWidth="161.0" promptText="Rolle" />
             <TextField fx:id="Tel1" layoutX="10.0" layoutY="245.0" prefHeight="27.0" prefWidth="161.0" promptText="Telefonnummer" />
             <TextField fx:id="teamID1" layoutX="10.0" layoutY="305.0" promptText="Teammedlemid" />
-            <Label alignment="CENTER" layoutX="166.0" layoutY="7.0" onMouseClicked="#musklik" prefHeight="12.0" prefWidth="16.0" text="X">
+            <Label alignment="CENTER" layoutX="168.0" layoutY="7.0" onMouseClicked="#musklik" prefHeight="12.0" prefWidth="16.0" text="X">
                <font>
                   <Font name="Arial Bold" size="11.0" />
                </font>
