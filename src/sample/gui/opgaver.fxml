@@ -25,17 +25,6 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="192.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Edit" textFill="WHITE">
-               <VBox.margin>
-                  <Insets top="30.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets top="10.0" />
-               </padding>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
             <Button fx:id="slet" mnemonicParsing="false" onAction="#Slet" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
                <VBox.margin>
                   <Insets top="30.0" />
