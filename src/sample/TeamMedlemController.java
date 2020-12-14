@@ -95,7 +95,7 @@ public class TeamMedlemController implements Initializable {
         teammedlem.setEfternavn(teammedlemStringCellEditEvent.getNewValue());
     }
 
-    //pushlknlkn
+
 
     public void editrolle(TableColumn.CellEditEvent<Teammedlem, String> teammedlemStringCellEditEvent) {
         Teammedlem teammedlem=tableTeammedlem.getSelectionModel().getSelectedItem();

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OpgaveController">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OpgaveController">
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
@@ -36,7 +40,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false"  prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Remove" textFill="WHITE">
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
@@ -67,5 +71,9 @@
             <TableColumn fx:id="estimat" onEditCommit="#OneditOpgaveestimat" prefWidth="100.0" text="Tids estimat" />
             <TableColumn fx:id="prioritetsniveau" onEditCommit="#OneditOpgaveprio" prefWidth="105.0" text="Prioritetsniveau" />
          </columns></TableView>
+      <TextField fx:id="opgavetekst" layoutX="631.0" layoutY="45.0" prefHeight="27.0" prefWidth="149.0" promptText="Opgavetekst" />
+      <TextField fx:id="krav" layoutX="634.0" layoutY="124.0" prefHeight="27.0" prefWidth="155.0" promptText="Krav" />
+      <TextField fx:id="tidsestimat" layoutX="634.0" layoutY="200.0" prefHeight="27.0" prefWidth="155.0" promptText="Tids estimat" />
+      <TextField fx:id="Prioritetsniveau" layoutX="634.0" layoutY="291.0" prefHeight="27.0" prefWidth="155.0" promptText="Prioritetsniveau" />
    </children>
 </AnchorPane>

@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.forsideController">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.forsideController">
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
-            <Button mnemonicParsing="false"  prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Colour IT" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font></Button>
@@ -49,13 +49,13 @@
             </Button>
          </children>
       </VBox>
-      <Label layoutX="223.0" layoutY="123.0" prefHeight="99.0" prefWidth="352.0" text="Velkommen  til  COLOUR IT">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="120.0" prefHeight="149.0" prefWidth="449.0" text="Velkommen  til  COLOUR IT">
          <font>
-            <Font size="27.0" />
+            <Font size="31.0" />
          </font>
       </Label>
       <HBox layoutX="552.0" layoutY="8.0" spacing="5.0" />
-      <Label alignment="CENTER" layoutX="583.0" onMouseClicked="#musklik" prefHeight="12.0" prefWidth="16.0" text="X">
+      <Label alignment="CENTER" layoutX="798.0" layoutY="7.0" onMouseClicked="#musklik" prefHeight="12.0" prefWidth="16.0" text="X">
          <font>
             <Font name="Arial Bold" size="11.0" />
          </font>

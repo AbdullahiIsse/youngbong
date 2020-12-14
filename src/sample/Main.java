@@ -20,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
         primaryStage.setTitle("Colour IT");
-        primaryStage.setScene(new Scene(root, 900, 400));
+        primaryStage.setScene(new Scene(root, 820, 400));
         primaryStage.setResizable(false);
 
         primaryStage.initStyle(StageStyle.UNDECORATED);

@@ -4,11 +4,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KundeController">
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KundeController">
    <children>
       <VBox layoutX="-2.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #477bc9#477bc9;">
          <children>
@@ -54,9 +55,12 @@
       </VBox>
       <TableView fx:id="table" layoutX="186.0" prefHeight="400.0" prefWidth="415.0">
          <columns>
-            <TableColumn fx:id="Fornavn" prefWidth="75.0" text="Fornavn" />
-            <TableColumn fx:id="Efternavn" prefWidth="75.0" text="Efternavn" />
-            <TableColumn fx:id="Telefonnummer" prefWidth="96.0" text="Telefonnummer" />
+            <TableColumn fx:id="Fornavn" prefWidth="128.0" text="Fornavn" />
+            <TableColumn fx:id="Efternavn" prefWidth="120.0" text="Efternavn" />
+            <TableColumn fx:id="Telefonnummer" prefWidth="166.0" text="Telefonnummer" />
          </columns></TableView>
+      <TextField fx:id="fornavn" layoutX="623.0" layoutY="44.0" promptText="Fornavn" />
+      <TextField fx:id="efternavn" layoutX="623.0" layoutY="150.0" promptText="Efternavn" />
+      <TextField fx:id="telefonnummer" layoutX="623.0" layoutY="268.0" promptText="Telefonnummer" />
    </children>
 </AnchorPane>
