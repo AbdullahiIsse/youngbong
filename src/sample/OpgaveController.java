@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -28,6 +29,7 @@ public class OpgaveController implements Initializable {
     public TextField krav1;
     public TextField tidsestimat1;
     public TextField Prioritetsniveau1;
+    public Button slet;
     @FXML
     private AnchorPane rootpane;
     @FXML
@@ -64,13 +66,6 @@ public class OpgaveController implements Initializable {
     }
 
 
-    public void ButtonSlet(javafx.event.ActionEvent actionEvent) {
-        ObservableList<Opgaver>sletOpgave, sletOpgaver;
-        sletOpgave=tableViewOpgaver.getItems();
-        sletOpgaver=tableViewOpgaver.getSelectionModel().getSelectedItems();
-        sletOpgaver.forEach(sletOpgave::remove);
-    }
-
     public void OneditOpgavetekst(TableColumn.CellEditEvent<Opgaver, String> opgaverStringCellEditEvent) {
         Opgaver opgave=tableViewOpgaver.getSelectionModel().getSelectedItem();
        opgave.setOpgavetekst(opgaverStringCellEditEvent.getNewValue());
@@ -105,6 +100,14 @@ public class OpgaveController implements Initializable {
     public void Nyside(ActionEvent actionEvent) {
         Opgaver opgave = new Opgaver(opgavetekst1.getText(), krav1.getText(),Integer.parseInt(tidsestimat1.getText()),Prioritetsniveau1.getText());
         tableViewOpgaver.getItems().add(opgave);
+    }
+
+    public void Slet(ActionEvent event)
+    {
+        ObservableList<Opgaver>sletOpgave, sletOpgaver;
+        sletOpgave=tableViewOpgaver.getItems();
+        sletOpgaver=tableViewOpgaver.getSelectionModel().getSelectedItems();
+        sletOpgaver.forEach(sletOpgave::remove);
     }
 }
 
