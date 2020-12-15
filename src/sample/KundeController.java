@@ -58,11 +58,6 @@ public class KundeController implements Initializable {
     }
 
     public ObservableList<Kunde>list = FXCollections.observableArrayList(
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678)
-
     );
 
     public void initialize(URL location, ResourceBundle rb){

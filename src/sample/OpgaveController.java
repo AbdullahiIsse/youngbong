@@ -54,8 +54,6 @@ public class OpgaveController implements Initializable {
 
 
     public ObservableList<Opgaver> Opgaveliste = FXCollections.observableArrayList(
-            new Opgaver("tom", "ben", 12345678, "Høj"),
-            new Opgaver("tom", "ben", 12345678, "lav")
     );
 
 
