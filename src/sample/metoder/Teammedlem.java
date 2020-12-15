@@ -63,4 +63,8 @@ public class Teammedlem
             ", TeammedlemId=" + TeammedlemId +
             '}';
   }
+  public String toxmll(){
+    return "<Teamedlem><fornavn>" + Fornavn + "</fornavn>" + "<efternavn>"+ Efternavn + "</efternavn>" + "<Rolle>" + Rolle + "</rolle>" + "<Telefonnummer>" + Telefonnummer + "</Telefonnummer>" + "<Teammedlemid>" + TeammedlemId + "</tea>";
+
+  }
 }

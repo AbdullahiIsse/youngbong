@@ -52,12 +52,7 @@ public class Scrummaster {
     }
 
 
-    public void mousedragged(MouseEvent mouseEvent) throws InterruptedException {
 
-       Notifications.create()
-               .title("Color IT")
-               .text("SE VORES HJEMMESIDE FOR MERE INFO").darkStyle().showWarning();
-    }
 
 
 }

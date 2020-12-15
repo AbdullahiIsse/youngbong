@@ -18,6 +18,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
+import parser.ParserException;
+import parser.XmlJsonParser;
 import sample.metoder.Opgaver;
 import sample.metoder.Teammedlem;
 
@@ -148,7 +150,7 @@ public class TeamMedlemController implements Initializable {
         tableTeammedlem.getItems().add(teammedlem);
     }
 
-    public void save(ActionEvent actionEvent) {
+    public void save(ActionEvent actionEvent) throws ParserException {
 
         FileChooser fileChooser = new FileChooser();
 
@@ -159,9 +161,7 @@ public class TeamMedlemController implements Initializable {
 
         File file = fileChooser.showSaveDialog(primaryStage);
 
-        if(file != null){
-            SaveFile(Teammedlem, file);
-        }
+
 
     }
 

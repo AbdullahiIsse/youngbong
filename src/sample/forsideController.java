@@ -35,10 +35,6 @@ public class forsideController {
         rootpane.getChildren().setAll(pane);
     }
 
-    public void musklik(MouseEvent mouseEvent) {
-
-        System.exit(0);
-    }
 
     public void load4(ActionEvent actionEvent) throws IOException, InterruptedException {
 
@@ -48,6 +44,11 @@ public class forsideController {
 
 
 
+    }
+
+    public void musklik(MouseEvent mouseEvent) {
+
+        System.exit(0);
     }
 }
 

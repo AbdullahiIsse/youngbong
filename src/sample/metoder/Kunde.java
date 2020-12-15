@@ -35,4 +35,13 @@ public class Kunde
   public void setTelefonnummer(int telefonnummer) {
     Telefonnummer = telefonnummer;
   }
+
+  @Override
+  public String toString() {
+    return "Kunde{" +
+            "Fornavn='" + Fornavn + '\'' +
+            ", Efternavn='" + Efternavn + '\'' +
+            ", Telefonnummer=" + Telefonnummer +
+            '}';
+  }
 }
