@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="358.0" y="694.0">sample.metoder.Opgaver</node>
+    <node x="0.0" y="927.0">sample.Main</node>
+    <node x="0.0" y="694.0">sample.metoder.Teammedlem</node>
+    <node x="666.0" y="694.0">sample.forsideController</node>
+    <node x="921.0" y="694.0">sample.metoder.Kunde</node>
+    <node x="447.0" y="0.0">sample.OpgaveController</node>
+    <node x="0.0" y="0.0">sample.TeamMedlemController</node>
+    <node x="911.0" y="0.0">sample.KundeController</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.36986301369863017" x="621.0" y="527.5" />
+  <SelectedNodes>
+    <node>sample.TeamMedlemController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

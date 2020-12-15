@@ -47,6 +47,17 @@
                   <Font size="18.0" />
                </font>
             </Button>
+            <Button mnemonicParsing="false" onAction="#load4" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #477bc9#477bc9 #477bc9#477bc9;" text="Scrummaster" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="120.0" prefHeight="149.0" prefWidth="449.0" text="Velkommen  til  COLOUR IT">

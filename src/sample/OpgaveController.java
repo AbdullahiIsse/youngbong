@@ -119,12 +119,12 @@ public class OpgaveController implements Initializable {
         sletOpgaver.forEach(sletOpgave::remove);
     }
 
-    public void save(ActionEvent actionEvent) {
+    public void save(ActionEvent  opgaven ) {
 
         FileChooser fileChooser = new FileChooser();
 
 
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XMl files (*.xml)", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);
 
 

@@ -153,19 +153,19 @@ public class TeamMedlemController implements Initializable {
         FileChooser fileChooser = new FileChooser();
 
 
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XMl files (*.xml)", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);
 
 
         File file = fileChooser.showSaveDialog(primaryStage);
 
         if(file != null){
-            SaveFile(tableTeammedlem, file);
+            SaveFile(Teammedlem, file);
         }
 
     }
 
-    private void SaveFile(TableView<sample.metoder.Teammedlem> teammedlem, File file) {
+    private void SaveFile(sample.metoder.Teammedlem teammedlem, File file) {
 
 
         try {
@@ -179,8 +179,6 @@ public class TeamMedlemController implements Initializable {
         }
 
     }
-
-
 
 
 

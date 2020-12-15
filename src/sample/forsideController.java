@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import sample.metoder.Kunde;
 
+import javax.management.Notification;
 import java.io.IOException;
 
 public class forsideController {
@@ -37,6 +38,16 @@ public class forsideController {
     public void musklik(MouseEvent mouseEvent) {
 
         System.exit(0);
+    }
+
+    public void load4(ActionEvent actionEvent) throws IOException, InterruptedException {
+
+        AnchorPane pane = FXMLLoader.load(getClass().getResource(
+                "gui/Scrummaster.fxml"));
+        rootpane.getChildren().setAll(pane);
+
+
+
     }
 }
 
