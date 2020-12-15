@@ -3,13 +3,14 @@ package sample.metoder;
 public class Kunde
 {
   private String Fornavn, Efternavn;
-  private int Telefonnummer;
+  private int Telefonnummer, kundeID;
 
-  public Kunde(String fornavn, String efternavn, int telefonnummer)
+  public Kunde(String fornavn, String efternavn, int telefonnummer,int kundeID)
   {
     Fornavn = fornavn;
     Efternavn = efternavn;
     Telefonnummer = telefonnummer;
+    this.kundeID=kundeID;
   }
 
   public String getFornavn() {
@@ -35,6 +36,10 @@ public class Kunde
   public void setTelefonnummer(int telefonnummer) {
     Telefonnummer = telefonnummer;
   }
+
+  public int getKundeID() { return kundeID;}
+
+  public void setKundeID(int kundeID) {this.kundeID = kundeID;}
 
   @Override
   public String toString() {

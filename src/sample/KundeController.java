@@ -36,6 +36,8 @@ public class KundeController implements Initializable {
     public TextField fornavn1;
     public TextField efternavn1;
     public TextField telefonnummer1;
+
+    public TextField kundeID1;
     @FXML
     private AnchorPane rootpane;
 
@@ -43,7 +45,9 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
+    @FXML private TableColumn<Kunde, Integer> KundeId;
     private Window primaryStage;
+
 
 
     public void loadback(ActionEvent actionEvent) throws IOException {
@@ -102,7 +106,7 @@ public class KundeController implements Initializable {
     }
 
     public void Add(ActionEvent actionEvent) {
-        Kunde kunde = new Kunde(fornavn1.getText(), efternavn1.getText(),Integer.parseInt(telefonnummer1.getText()));
+        Kunde kunde = new Kunde(fornavn1.getText(), efternavn1.getText(),Integer.parseInt(telefonnummer1.getText()),Integer.parseInt(kundeId1.getText()));
         table.getItems().add(kunde);
     }
 
