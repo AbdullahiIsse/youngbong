@@ -1,4 +1,4 @@
-package sample;
+package Kunder;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,7 +7,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -18,9 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
-import sample.metoder.Kunde;
-import sample.metoder.Opgaver;
-import sample.metoder.Teammedlem;
 
 
 import java.io.File;
@@ -45,7 +41,7 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
-    @FXML private TableColumn<Kunde, Integer> KundeId;
+    @FXML private TableColumn<Kunde, Integer> kundeId1;
     private Window primaryStage;
 
 

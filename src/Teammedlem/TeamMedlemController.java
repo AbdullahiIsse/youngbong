@@ -1,4 +1,4 @@
-package sample;
+package Teammedlem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

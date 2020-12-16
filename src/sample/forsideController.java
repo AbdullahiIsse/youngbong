@@ -3,12 +3,9 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import sample.metoder.Kunde;
 
-import javax.management.Notification;
 import java.io.IOException;
 
 public class forsideController {

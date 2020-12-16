@@ -7,16 +7,16 @@
     <node x="0.0" y="927.0">sample.Main</node>
     <node x="0.0" y="694.0">sample.metoder.Teammedlem</node>
     <node x="666.0" y="694.0">sample.forsideController</node>
-    <node x="921.0" y="694.0">sample.metoder.Kunde</node>
-    <node x="447.0" y="0.0">sample.OpgaveController</node>
-    <node x="0.0" y="0.0">sample.TeamMedlemController</node>
-    <node x="911.0" y="0.0">sample.KundeController</node>
+    <node x="921.0" y="694.0">Kunder.Kunde</node>
+    <node x="447.0" y="0.0">Opgaver.OpgaveController</node>
+    <node x="0.0" y="0.0">Teammedlem.TeamMedlemController</node>
+    <node x="911.0" y="0.0">Kunder.KundeController</node>
   </nodes>
   <notes />
   <edges />
   <settings layout="Hierarchic Group" zoom="0.36986301369863017" x="621.0" y="527.5" />
   <SelectedNodes>
-    <node>sample.TeamMedlemController</node>
+    <node>Teammedlem.TeamMedlemController</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

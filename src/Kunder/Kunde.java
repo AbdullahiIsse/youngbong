@@ -1,4 +1,4 @@
-package sample.metoder;
+package Kunder;
 
 public class Kunde
 {
