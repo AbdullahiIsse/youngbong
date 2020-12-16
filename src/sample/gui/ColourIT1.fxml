@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ColourITController">
+   <children>
+      <AnchorPane layoutX="166.0" prefHeight="400.0" prefWidth="434.0">
+         <children>
+            <TableView prefHeight="400.0" prefWidth="434.0">
+              <columns>
+                <TableColumn prefWidth="133.0" text="Medarbejder ID" />
+                <TableColumn prefWidth="153.0" text="Opgave ID" />
+                  <TableColumn prefWidth="147.0" text="Prirotetsniveau" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="-1.0" prefHeight="400.0" prefWidth="165.0" style="-fx-background-color: blue;">
+         <children>
+            <Label layoutX="39.0" layoutY="75.0" prefHeight="17.0" prefWidth="91.0" text="MedarbejderID" textFill="WHITE" />
+            <Label layoutX="37.0" layoutY="169.0" prefHeight="17.0" prefWidth="91.0" text="OpgaveID" textFill="WHITE" />
+            <Label layoutX="35.0" layoutY="261.0" prefHeight="17.0" prefWidth="91.0" text="Prirotetsniveau" textFill="WHITE" />
+            <Button layoutX="107.0" layoutY="355.0" mnemonicParsing="false" text="ADD" />
+            <Button layoutX="13.0" layoutY="355.0" mnemonicParsing="false" text="Cancel" />
+            <ComboBox fx:id="comboBoxMedarbejder" layoutX="6.0" layoutY="104.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxOpgaveID" layoutX="5.0" layoutY="200.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxPri" layoutX="6.0" layoutY="297.0" prefWidth="150.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
